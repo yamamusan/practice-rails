@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label 'タイトル' %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :body %>
+    <%= form.label '本文' %>
     <%= form.text_area :body %>
   </div>
 
   <div class="actions">
-    <%= form.submit "#{button}" %>
+    <%= form.submit "#{button}", class: "submit-btn" %>
   </div>
 <% end %>
