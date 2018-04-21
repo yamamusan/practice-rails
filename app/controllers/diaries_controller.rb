@@ -1,6 +1,8 @@
 class DiariesController < ApplicationController
+
   before_action :set_diary, only: [:show, :edit, :update, :destroy]
   before_action :set_time, only: [:show, :index, :edit]
+  around_action LoggingAction.new, only: [:index, :show, :index, :edit]
 
   # GET /diaries
   # GET /diaries.json
