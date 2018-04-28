@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>ID</th>
+      <th>作成者</th>
       <th>タイトル</th>
       <th>登録日時</th>
       <th>更新日時</th>
@@ -16,6 +17,7 @@
     <% @diaries.each do |diary| %>
       <tr>
         <td><%= diary.id %></td>
+        <td><%= diary.author %></td>
         <td><%= link_to diary.title, diary %></td>
         <td><%= diary.created_at %></td>
         <td><%= diary.updated_at %></td>
