@@ -2,7 +2,9 @@ class SessionsController < ApplicationController
   # before_action :require_sign_in!, only: [:destroy]
   before_action :set_user, only: [:create]
   around_action LoggingAction.new, only: [:new, :create]
-
+  # ログインなしでアクセス可能な画面を定義 
+  skip_before_action :require_sign_in!, only: [:new, :create]
+  
   def new
   end
 
