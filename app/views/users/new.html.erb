@@ -1,0 +1,27 @@
+<%= form_with(model: @user, local: true) do |form| %>
+
+  <div class="field">
+    <%= form.label '名前' %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'メール' %>
+    <%= form.text_area :mail %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'パスワード' %>
+    <%= form.text_area :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'パスワード(確認)' %>
+    <%= form.text_area :password_confirmation %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "登録", class: "submit-btn" %>
+  </div>
+
+<% end %>

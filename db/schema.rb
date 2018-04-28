@@ -10,11 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_21_105405) do
+ActiveRecord::Schema.define(version: 2018_04_28_135405) do
 
   create_table "diaries", force: :cascade do |t|
     t.string "title"
     t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name", limit: 191, null: false
+    t.string "mail", limit: 191, null: false
+    t.string "password_digest", limit: 191, null: false
+    t.string "remember_token", limit: 191
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
