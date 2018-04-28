@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      # xxx_path => GET /xxx を生成 
       redirect_to login_path
     else
       render 'new'

@@ -1,0 +1,19 @@
+<%= form_with(local: true, url: login_path) do |form| %>
+  
+  <p id="danger"><%= flash[:danger] %></p>
+
+  <div class="field">
+    <%= form.label 'メール' %>
+    <%= form.text_field :mail %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'パスワード' %>
+    <%= form.text_area :password %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "ログイン", class: "submit-btn" %>
+  </div>
+
+<% end %>
